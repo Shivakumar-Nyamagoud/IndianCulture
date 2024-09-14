@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Booking</title>
+    <link rel="stylesheet" href="booking.css">
+    <style>
+        /* Success Message Styling */
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 100;
+        }
+        
+        /* Flower Animation Styling */
+        .flower {
+            width: 50px;
+            height: 50px;
+            background-image: url('flower.png'); /* Replace with your flower image URL */
+            background-size: contain;
+            animation: bloom 3s infinite;
+        }
+
+        @keyframes bloom {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Journey</h1>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="journey">Journey:</label>
+            <select id="journey" name="journey" required>
+                <option value="karnataka">karnataka</option>
+                <option value="kerala">kerala</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="uttar pradesh">Uttar Pradesh</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="tanilnadu">Tamilnadu</option>
+                <option value="andra pradesh">Andhra pradesh</option>
+                <option value="jammu kashmirk">Jammu kashmir</option>
+                <option value="himachal pradesh">Himachal Pradesh</option>
+                
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <!-- Success Message Pop-up -->
+    <div id="successMessage" class="success-message">
+        <div class="flower"></div>
+        <h2>Booking Successful!</h2>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyDwM_b0TKzkd3sqD4V5k3k0H6antbm-9A8",
+            authDomain: "indian-culture-97811.firebaseapp.com",
+            databaseURL: "https://indian-culture-97811-default-rtdb.firebaseio.com",
+            projectId: "indian-culture-97811",
+            storageBucket: "indian-culture-97811.appspot.com",
+            messagingSenderId: "136858617140",
+            appId: "1:136858617140:web:3b9906d8713ad906051161"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const journey = document.getElementById('journey').value;
+            const date = document.getElementById('date').value;
+
+            // Reference to the 'bookings' node
+            const bookingsRef = ref(db, 'bookings');
+
+            // Push data to Firebase
+            push(bookingsRef, {
+                name: name,
+                email: email,
+                journey: journey,
+                date: date
+            }).then(() => {
+                // Display Success Message
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'block';
+
+                // Redirect after 3 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    window.location.href = 'kerala.html'; // Replace with your home page URL
+                }, 3000);
+            }).catch((error) => {
+                document.getElementById('message').innerText = 'Error: ' + error.message;
+            });
+        });
+    </script>
+</body>
+</html>

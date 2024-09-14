@@ -1,0 +1,500 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  color: #b22222;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+header {
+  /* no-repeat center center/cover;*/
+  /* height: 100vh; */
+  
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.5em;
+  color: rgb(207, 77, 12);
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b22222;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  
+}
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Vertical Transparent Navigation Bar */
+.vertical-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 90vh; /* Full height of the viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Keep it above other content */
+}
+
+.vertical-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-nav ul li {
+  margin: 20px 0;
+}
+
+.vertical-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Georgia', serif;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.vertical-nav ul li a:hover {
+  background-color: #b22222;
+  color: white;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  
+}
+
+/* Main content styling */
+main {
+  margin-left: 200px; /* Space for the navbar */
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Section styling */
+section {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+}
+
+/* Sticky Behavior for the navbar */
+.vertical-nav {
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0;
+}
+
+
+
+
+/* Hero Section Styling */
+#hero {
+  margin-left: 100px; /* Adjust to align with the fixed navbar */
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Center the slideshow within the main content */
+.slideshow-container {
+  max-width: 85%; /* Adjust width as needed */
+  height: 500px; /* Fixed height for the slideshow */
+  margin: 0 auto; /* Center the container horizontally */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for better visual appeal */
+}
+
+.slides {
+  display: none;
+  width: 100%; /* Ensure the image fits the container */
+  height: 100%; /* Ensure the image fits the container */
+  transition: transform 2s ease-in-out;
+}
+
+.slides img {
+  width: 100%; /* Ensure the image fills the container width */
+  height: 100%; /* Ensure the image fills the container height */
+  object-fit: cover; /* Crop images to fit container while preserving aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+}
+.slides:first-child {
+  display: block;
+}
+
+
+
+/* Main content styling */
+main {
+  margin-left: 220px; /* Leave space for the sidebar */
+  padding: 20px;
+}
+
+/* Section styling */
+section {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #b22222;
+}
+
+/* Sticky Behavior for the navbar */
+.vertical-nav {
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0;
+}
+
+
+/* About Section */
+#about {
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+  
+}
+
+#about h2 {
+  margin-bottom: 20px;
+}
+#about p {
+text-align: left;
+}
+/* History Section */
+#history {
+  padding: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+#history h2 {
+  margin-bottom: 20px;
+}
+#history p {
+  text-align: left;
+}
+/* Art Section */
+#art {
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+}
+
+#art h2 {
+  margin-bottom: 20px;
+}
+
+/* Festivals Section */
+#festivals {
+  padding: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+#festivals h2 {
+  margin-bottom: 20px;
+}
+
+/* Cuisine Section */
+#cuisine {
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+}
+
+#cuisine h2 {
+  margin-bottom: 20px;
+}
+
+/* Gallery Section */
+/* Gallery Section */
+#gallery {
+  padding: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover zoom effect */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay text */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  font-size: 1.2em;
+  transition: opacity 0.3s ease;
+}
+
+/* Display overlay text on hover */
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+
+/* Contact Section */
+#contact {
+  padding: 50px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+#contact button {
+  padding: 10px;
+  background-color: #b22222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #a02020;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+/* Styling for the "Know More" section */
+#moreInfo {
+  background-color: #f9f9f9; /* Light background color */
+  border: 1px solid #ddd; /* Light border for definition */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the div */
+  margin-top: 20px; /* Space above the div */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  text-align: left; /* Align text to the left */
+  line-height: 1.6; /* Increase line height for readability */
+  font-size: 1em; /* Ensure font size is legible */
+}
+
+#toggleButton {
+  background-color: #b22222; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 1em; /* Button text size */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#toggleButton:hover {
+  background-color: #a52a2a; /* Darker background color on hover */
+}
+
+#toggleButton:focus {
+  outline: none; /* Remove default outline on focus */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Add shadow to indicate focus */
+}
+
+#moreInfoo {
+  background-color: #f9f9f9; /* Light background color */
+  border: 1px solid #ddd; /* Light border for definition */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the div */
+  margin-top: 20px; /* Space above the div */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  text-align: left; /* Align text to the left */
+  line-height: 1.6; /* Increase line height for readability */
+  font-size: 1em; /* Ensure font size is legible */
+}
+
+#toggleButtonn {
+  background-color: #b22222; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 1em; /* Button text size */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#toggleButtonn:hover {
+  background-color: #a52a2a; /* Darker background color on hover */
+}
+
+#toggleButtonn:focus {
+  outline: none; /* Remove default outline on focus */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Add shadow to indicate focus */
+}
+#art h3, p{
+  text-align: left;
+}
+/* .more{
+  text-decoration: none;padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: ;
+  color: #ddd;
+  background-color: #b22222;
+} */
+.more:hover{
+  background-color: #ee0909;
+}
+
+#moreInfo1 {
+  background-color: #f9f9f9; /* Light background color */
+  border: 1px solid #ddd; /* Light border for definition */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the div */
+  margin-top: 20px; /* Space above the div */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  text-align: left; /* Align text to the left */
+  line-height: 1.6; /* Increase line height for readability */
+  font-size: 1em; /* Ensure font size is legible */
+}
+
+#toggleButton1 {
+  background-color: #b22222; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 1em; /* Button text size */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#toggleButton1:hover {
+  background-color: #a52a2a; /* Darker background color on hover */
+}
+
+.book-trip-btn {
+  position: fixed; /* Makes the button sticky */
+  right: 20px; /* Positions the button 20px from the right edge */
+  top: 50%; /* Centers the button vertically */
+  transform: translateY(-50%); /* Adjusts position to ensure it is exactly centered */
+  padding: 15px 25px; /* Adds some padding to make the button look nice */
+  background-color: #ff5722; /* Orange background color */
+  color: white; /* White text color */
+  border: none; /* Removes the default button border */
+  border-radius: 5px; /* Adds slight rounded corners */
+  cursor: pointer; /* Adds pointer cursor on hover */
+  font-size: 16px; /* Sets a decent font size */
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  z-index: 1000; /* Ensures the button stays on top */
+}
+
+.book-trip-btn:hover {
+  background-color: #31f14a; /* Darkens the button on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Deepens the shadow on hover */
+}
+
+
+
+
+
+
+
+
+
+.main-content {
+  margin-left: 200px; /* Adjusts the content to the right of the navbar */
+  padding: 20px; /* Adds some padding to the main content */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  height: 100vh; /* Takes up the full height of the screen */
+  overflow-y: auto; /* Allows vertical scrolling if content is long */
+}
