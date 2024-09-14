@@ -330,7 +330,7 @@ header a{
   }
   
   .book-trip-btn:hover {
-    background-color: #31f14a; /* Darkens the button on hover */
+    background-color: #d4430e; /* Darkens the button on hover */
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Deepens the shadow on hover */
   }
   
