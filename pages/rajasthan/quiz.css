@@ -1,0 +1,136 @@
+/* General body styling */
+body {
+    font-family:'Times New Roman', Times, serif;
+    
+    background-color: #a19e9b;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.top-left {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    
+}
+
+.top-left a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 100%;
+    background-color: #333;
+    border: 2px solid black;
+    padding: 10px;
+
+}
+
+
+.quiz-container {
+    width: 50%;
+    background: #e7dcd2;
+    padding: 30px;
+    box-shadow: 40px 40px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #333;
+  text-decoration: underline;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #444;
+}
+
+.options {
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+}
+
+.option {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+    
+}
+
+
+
+.option:hover {
+    background-color: #000000;
+    transform: translateY(-3px);
+}
+
+#nextBtn {
+    background-color:  #4e504e;;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 1s ease-in-out;
+}
+
+#nextBtn:hover {
+    background-color: #a2a5a2;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #442a28;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#result.show {
+    opacity: 1;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
