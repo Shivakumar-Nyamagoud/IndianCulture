@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnataka Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2a9d8f;
+        }
+        form {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .option {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .option input {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2a9d8f;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #21867a;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .correct-answer {
+            color: #2a9d8f;
+            font-weight: bold;
+        }
+        .user-answer {
+            color: #ffd747;
+        }
+        .incorrect-answer {
+            color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <h1>Karnataka Quiz</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. What is the official language of Karnataka?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="a"> Tamil</label>
+                <label class="option"><input type="radio" name="q1" value="b"> Kannada</label>
+                <label class="option"><input type="radio" name="q1" value="c"> Telugu</label>
+                <label class="option"><input type="radio" name="q1" value="d"> Hindi</label>
+            </div>
+            <div class="feedback" id="feedback-q1"></div>
+        </div>
+
+        <div class="question">
+            <p>2. Which historical site is known for its ruins and was once the capital of the Vijayanagara Empire?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="a"> Aihole</label>
+                <label class="option"><input type="radio" name="q2" value="b"> Badami</label>
+                <label class="option"><input type="radio" name="q2" value="c"> Hampi</label>
+                <label class="option"><input type="radio" name="q2" value="d"> Pattadakal</label>
+            </div>
+            <div class="feedback" id="feedback-q2"></div>
+        </div>
+
+        <div class="question">
+            <p>3. Which festival marks the New Year in Karnataka?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="a"> Diwali</label>
+                <label class="option"><input type="radio" name="q3" value="b"> Ugadi</label>
+                <label class="option"><input type="radio" name="q3" value="c"> Holi</label>
+                <label class="option"><input type="radio" name="q3" value="d"> Navratri</label>
+            </div>
+            <div class="feedback" id="feedback-q3"></div>
+        </div>
+
+        <div class="question">
+            <p>4. What is a traditional art form of Karnataka that involves intricate dance and music?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="a"> Kathakali</label>
+                <label class="option"><input type="radio" name="q4" value="b"> Bharatanatyam</label>
+                <label class="option"><input type="radio" name="q4" value="c"> Yakshagana</label>
+                <label class="option"><input type="radio" name="q4" value="d"> Odissi</label>
+            </div>
+            <div class="feedback" id="feedback-q4"></div>
+        </div>
+
+        <div class="question">
+            <p>5. Karnataka is famous for producing high-quality what type of wood?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="a"> Rosewood</label>
+                <label class="option"><input type="radio" name="q5" value="b"> Teak</label>
+                <label class="option"><input type="radio" name="q5" value="c"> Sandalwood</label>
+                <label class="option"><input type="radio" name="q5" value="d"> Bamboo</label>
+            </div>
+            <div class="feedback" id="feedback-q5"></div>
+        </div>
+
+        <div class="question">
+            <p>6. Which city is known as the 'Silicon Valley of India' due to its IT industry?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="a"> Mysuru</label>
+                <label class="option"><input type="radio" name="q6" value="b"> Hubli</label>
+                <label class="option"><input type="radio" name="q6" value="c"> Bengaluru</label>
+                <label class="option"><input type="radio" name="q6" value="d"> Belagavi</label>
+            </div>
+            <div class="feedback" id="feedback-q6"></div>
+        </div>
+
+        <div class="question">
+            <p>7. What is the name of the famous temple dedicated to Lord Shiva located in Badami?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="a"> Virupaksha Temple</label>
+                <label class="option"><input type="radio" name="q7" value="b"> Mahakuta Temple</label>
+                <label class="option"><input type="radio" name="q7" value="c"> Kedareshvara Temple</label>
+                <label class="option"><input type="radio" name="q7" value="d"> Cave Temple</label>
+            </div>
+            <div class="feedback" id="feedback-q7"></div>
+        </div>
+
+        <div class="question">
+            <p>8. Which Karnataka festival is known for its vibrant floats and processions?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="a"> Karaga</label>
+                <label class="option"><input type="radio" name="q8" value="b"> Ganesha Chaturthi</label>
+                <label class="option"><input type="radio" name="q8" value="c"> Makar Sankranti</label>
+                <label class="option"><input type="radio" name="q8" value="d"> Dasara</label>
+            </div>
+            <div class="feedback" id="feedback-q8"></div>
+        </div>
+
+        <div class="question">
+            <p>9. The traditional Karnataka dance form that involves elaborate costumes and facial expressions is called?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="a"> Kathak</label>
+                <label class="option"><input type="radio" name="q9" value="b"> Kuchipudi</label>
+                <label class="option"><input type="radio" name="q9" value="c"> Yakshagana</label>
+                <label class="option"><input type="radio" name="q9" value="d"> Mohiniyattam</label>
+            </div>
+            <div class="feedback" id="feedback-q9"></div>
+        </div>
+
+        <div class="question">
+            <p>10. Which of these is a famous hill station located in Karnataka?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="a"> Coorg</label>
+                <label class="option"><input type="radio" name="q10" value="b"> Matheran</label>
+                <label class="option"><input type="radio" name="q10" value="c"> Mount Abu</label>
+                <label class="option"><input type="radio" name="q10" value="d"> Ooty</label>
+            </div>
+            <div class="feedback" id="feedback-q10"></div>
+        </div>
+
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+
+    <script>
+        function calculateScore() {
+            const answers = ['b', 'c', 'b', 'c', 'c', 'c', 'b', 'd', 'c', 'a'];
+            const correctAnswers = [
+                'Kannada',
+                'Hampi',
+                'Ugadi',
+                'Yakshagana',
+                'Sandalwood',
+                'Bengaluru',
+                'Mahakuta Temple',
+                'Dasara',
+                'Yakshagana',
+                'Coorg'
+            ];
+            let score = 0;
+
+            for (let i = 0; i < answers.length; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i + 1}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback-q${i + 1}`);
+                const correctAnswer = correctAnswers[i];
+                
+                if (selectedOption) {
+                    const userAnswer = selectedOption.parentElement.textContent.trim();
+                    if (selectedOption.value === answers[i]) {
+                        score++;
+                        feedbackDiv.innerHTML = `<span class="correct-answer">Correct!</span> <br> Your Answer: ${userAnswer} <br> Correct Answer: ${correctAnswer}`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrect-answer">Incorrect</span> <br> Your Answer: ${userAnswer} <br> Correct Answer: ${correctAnswer}`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrect-answer">Not Answered</span> <br> Correct Answer: ${correctAnswer}`;
+                }
+            }
+
+            document.querySelector('form').innerHTML += `<div id="final-score">You scored <span style="color: #2a9d8f; font-size: 24px; font-weight: bold;">${score}</span> out of ${answers.length}!</div>`;
+        }
+    </script>
+</body>
+</html>
