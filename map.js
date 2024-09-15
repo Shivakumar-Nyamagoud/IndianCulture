@@ -7,6 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
+
 // Define the function to handle highlighting states
 function highlightFeature(e) {
     const layer = e.target;
