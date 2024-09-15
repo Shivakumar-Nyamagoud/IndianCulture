@@ -499,3 +499,27 @@ footer p {
   height: 100vh; /* Takes up the full height of the screen */
   overflow-y: auto; /* Allows vertical scrolling if content is long */
 }
+
+
+.book-trip-btnn {
+    position: fixed; /* Makes the button sticky */
+    right: 20px; /* Positions the button 20px from the right edge */
+    top: 95%; /* Centers the button vertically */
+    transform: translateY(-50%); /* Adjusts position to ensure it is exactly centered */
+    padding: 15px 25px; /* Adds some padding to make the button look nice */
+    background-color: #ff2222; /* Orange background color */
+    color: white; /* White text color */
+    border: none; /* Removes the default button border */
+    border-radius: 5px; /* Adds slight rounded corners */
+    cursor: pointer; /* Adds pointer cursor on hover */
+    font-size: 16px; /* Sets a decent font size */
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    text-decoration: none;
+    z-index: 1000; /* Ensures the button stays on top */
+}
+
+.book-trip-btnn:hover {
+    background-color: #b73007; /* Darkens the button on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Deepens the shadow on hover */
+}
