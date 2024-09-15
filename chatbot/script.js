@@ -22,7 +22,12 @@ function getBotResponse(userInput) {
     // List of keywords or key phrases and their corresponding bot responses
     if (userInput.includes("karnataka")) {
         botMessage = "Karnataka is known for its rich history, architecture, and natural beauty. Key attractions include the Hampi ruins, Mysore Palace, and the Western Ghats. Karnataka is also famous for its classical music, dance forms like Yakshagana, and cuisine including dishes like Bisi Bele Bath and Mysore Pak.";
-    } else if (userInput.includes("maharashtra")) {
+     }else if (userInput.includes("hi") || userInput.includes("hello") || userInput.includes("hey")) {
+            botMessage = "Hi there! How can I help you learn more about Indian culture today?";
+        }
+        
+
+    else if (userInput.includes("maharashtra")) {
         botMessage = "Maharashtra is home to India's financial capital, Mumbai, and famous for its diverse culture, Bollywood, and historical landmarks like the Ajanta and Ellora caves, and the Gateway of India. It is known for its traditional festivals like Ganesh Chaturthi and vibrant cuisine such as Vada Pav and Puran Poli.";
     } else if (userInput.includes("uttar pradesh") || userInput.includes("up")) {
         botMessage = "Uttar Pradesh, the heartland of India, is known for the Taj Mahal, Varanasi (a spiritual city), and the Ganges River. The state is rich in cultural and religious heritage with festivals like Holi and Diwali celebrated in grandeur. UP's cuisine includes delicacies like kebabs, biryani, and sweets like Petha.";
