@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/up/css/main.css">
+    <title>Footer Section</title>
+</head>
+<body>
+
+    <footer id="contact">
+        <h2>Tell Us</h2>
+        <p>For any changes or updates, feel free to reach out.</p>
+        <form id="bookingForm" action="#" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>&copy; 2024 Cultural Heritage of India. All Rights Reserved.</p>
+        
+        <div id="successMessage" class="success-message" style="display: none;">
+            <div class="flower"></div>
+            <h2>Thank you!!Message sent Successfully!</h2>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="color: red; display: none;"></div>
+    
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDwM_b0TKzkd3sqD4V5k3k0H6antbm-9A8",
+            authDomain: "indian-culture-97811.firebaseapp.com",
+            databaseURL: "https://indian-culture-97811-default-rtdb.firebaseio.com",
+            projectId: "indian-culture-97811",
+            storageBucket: "indian-culture-97811.appspot.com",
+            messagingSenderId: "136858617140",
+            appId: "1:136858617140:web:3b9906d8713ad906051161"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Reference to the 'messages' node in Firebase
+            const messageRef = ref(db, 'messages');
+
+            // Push data to Firebase
+            push(messageRef, {
+                name: name,
+                email: email,
+                message: message
+            }).then(() => {
+                // Display success message
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'block';
+
+                // Redirect after 3 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    window.location.href = 'home.html'; // Replace with your home page URL
+                }, 3000);
+            }).catch((error) => {
+                // Display error message
+                const errorMessage = document.getElementById('errorMessage');
+                errorMessage.style.display = 'block';
+                errorMessage.textContent = 'Error: ' + error.message;
+            });
+        });
+    </script>
+
+</body>
+</html>
